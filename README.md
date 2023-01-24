@@ -46,8 +46,5 @@ if CLIENT then
 end
 ```
 
-Example scale data file:
-https://cdn.discordapp.com/attachments/418480949542780938/1067365053021556767/enemy_bone_scale_animations.lua
-
 # Examples
 https://user-images.githubusercontent.com/7193583/214250584-d0598c7d-a9af-4f9c-8795-be14f178cd23.mp4
