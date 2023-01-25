@@ -34,8 +34,11 @@
 ------------------==============================================================================================================================------------------
 ------------------==============================================================================================================================------------------
 
+CreateClientConVar("scaler_enabled", "1", true, false)
+
 Scaler = Scaler or {}
-Scaler.Global = GetConVar("scaler_global"):GetBool() or false
+local var = GetConVar("scaler_global")
+Scaler.Global = var && var:GetBool() or false
 
 local dev = false
 
@@ -142,8 +145,6 @@ Scaler.ApplyScalerKeys = function(ent) -- Place in client-side CustomOnDraw func
         end
     end
 end
-
-CreateClientConVar("scaler_enabled", "1", true, false)
 
 cvars.AddChangeCallback("scaler_enabled", function(convar_name, value_old, value_new)
     if value_new == "1" then
